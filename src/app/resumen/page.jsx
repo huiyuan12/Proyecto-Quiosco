@@ -14,10 +14,7 @@ const customStyles = {
       transform: 'translate(-50%, -50%)',
     },
   };
-export const metadata = {
-    title: 'CaféFresh - Resumen',
-    description: 'Resumen del pedido',
-  }
+
   
 const ResumenPage = () => {
     const {pedido,modal,setAdmin} = useQuiosco();

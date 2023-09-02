@@ -3,10 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useQuiosco } from '../../../context/QuioscoContext'
 import { formatToEuros } from '@/helpers'
 import { ToastContainer } from 'react-toastify'
-export const metadata = {
-    title: 'CaféFresh - Total',
-    description: 'Resumen del pedido',
-  }
+
 const TotalPage = () => {
     const{pedido} = useQuiosco();
     const [enable,disable] = useState(false);
