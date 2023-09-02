@@ -6,7 +6,7 @@ import Orden from '../components/Orden'
 import { formatToEuros } from '@/helpers'
 
 export const revalidate = 5;
-const page = () => {
+const AdminPage = () => {
   const {setAdmin,admin} = useQuiosco();
   const [ordenes,setOrdenes] = useState([])
   const [dineroCaja,setDineroCaja] = useState(0);
@@ -43,4 +43,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AdminPage
