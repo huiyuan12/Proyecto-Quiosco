@@ -13,11 +13,11 @@ const Producto = ({producto}) => {
         </div>
 
         <div className='md:p-5'>
-            <h3 className='md:text-2xl font-bold'>{nombre}</h3>
-            <p className='mt-5 font-black text-amber-300 text-4xl'>{
+            <h3 className='md:text-2xl font-bold text-center mt-3'>{nombre}</h3>
+            <p className='mt-3 font-black text-amber-300 text-center md:text-4xl '>{
             formatToEuros(precio)}  </p>
 
-            <button type='button' className='bg-indigo-600 hover:bg-indigo-800  text-white font-bold uppercase md:p-3 w-full mt-5'
+            <button type='button' className='bg-indigo-600 hover:bg-indigo-800  text-white font-bold uppercase md:p-3 w-full mt-3'
             onClick={()=>{handleClickProducto(producto); changeModal()}}> Añadir </button>
         </div>
     </div>
