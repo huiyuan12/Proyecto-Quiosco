@@ -1,16 +1,18 @@
 "use client"
+import useLocalStorage from '@/hooks/useLocalStorage';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { toast } from "react-toastify"
 const QuioscoContext = createContext();
 const QuioscoProvider = ({children}) => {
+    const [pedido,setPedido] = useLocalStorage("tareas",[])
     const router = useRouter();
     const [categorias,setCategorias] = useState([]);
     const [categoriaActual,setCategoriaActual] = useState({});
     const [producto,setProducto] = useState({});
     const [modal,setModal] = useState(false);
-    const [pedido,setPedido] = useState([]);
+   
     const [paso,setPaso] = useState(1);
     const [nombre,setNombre] = useState("");
     const [total,setTotal] = useState(0);
@@ -22,6 +24,7 @@ const QuioscoProvider = ({children}) => {
         const totalPagar = pedido.reduce((total,element)=>total+element.precio*element.cantidad,0);
         setTotal(totalPagar);
         }
+        localStorage.setItem("pedido",JSON.stringify(pedido));
     },[pedido])
     const enviarPedido = async e=>{
         e.preventDefault();
