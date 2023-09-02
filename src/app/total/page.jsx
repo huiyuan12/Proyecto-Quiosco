@@ -7,11 +7,11 @@ import { ToastContainer } from 'react-toastify'
 const TotalPage = () => {
     const{pedido} = useQuiosco();
     const [enable,disable] = useState(false);
-    const {nombre,setNombre,enviarPedido,total,setAdmin} = useQuiosco();
+    const {nombre,setNombre,enviarPedido,total,setAdmin,setTotal} = useQuiosco();
     useEffect(()=>{
       setAdmin(false);
     },[])
- 
+  if(pedido.length === 0) setTotal(0);
   return (
     <div className='flex flex-col'>
      <h1 className='text-4xl font-black '>

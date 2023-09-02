@@ -96,7 +96,7 @@ const QuioscoProvider = ({children}) => {
   return (
     <QuioscoContext.Provider value={{
         categorias,handleChangeCategoria,categoriaActual,handleClickProducto,producto,changeModal,modal,añadirPedido,pedido,
-        changePaso,paso, handleChangePedido, eliminarProducto,nombre,setNombre,enviarPedido,total,admin,setAdmin
+        changePaso,paso, handleChangePedido, eliminarProducto,nombre,setNombre,enviarPedido,total,admin,setAdmin,setTotal
     }}>
         {children}
     </QuioscoContext.Provider>
