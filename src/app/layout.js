@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body id="next">
         <QuioscoProvider>
         <Pasos/>
-        <div className='flex gap-5'>
+        <div className='flex md:gap-5'>
         <Sidebar/> 
           
           {children}

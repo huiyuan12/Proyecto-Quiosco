@@ -23,10 +23,10 @@ const ResumenPage = () => {
     },[])
   return (
    <div className=' flex flex-col '>
-    <h1 className='text-4xl font-black '>
+    <h1 className='md:text-4xl font-black text-center md:text-left'>
         Resumen de tu pedido
      </h1>
-     <p className='text-2xl my-4'>Elige y personaliza tu pedido</p>
+     <p className='md:text-2xl my-4'>Elige y personaliza tu pedido</p>
 
      {pedido.length === 0 ? <p> No hay elementos en tu pedido </p>:
      (

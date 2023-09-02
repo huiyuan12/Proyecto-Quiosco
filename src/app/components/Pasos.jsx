@@ -28,16 +28,18 @@ const Pasos = () => {
         }
         return progreso;
     }
-  return (
-    <aside className='flex items-center gap-5'>
-    <Image className="ml-10" width={200} height={100} src={`/assets/img/logo.svg`}
+  return ( 
+ 
+    <aside className='flex items-center md:gap-5'>
+    <div className='w-20 '>
+    <Image className="md: ml-4" width={200} height={100} src={`/assets/img/logo.svg`}
      alt="Imagen Logotipo"/>
-      
+     </div>
     
-   <div className='flex flex-col w-full mt-5'>
+   <div className='flex flex-col w-full md:w-full mt-5 ml-10 md:p-5'>
     <nav className='flex justify-between font-bold text-3xl'>
     {pasos.map(element=>(
-        <Link key={element.id} href={`${element.url}`} onClick={()=>changePaso(element.id)}>{element.nombre}</Link>
+        <Link key={element.id} href={`${element.url}`} onClick={()=>changePaso(element.id)} className='text-xs md:text-3xl md:p-5'>{element.nombre}</Link>
     ))}
     </nav>
 
@@ -46,6 +48,7 @@ const Pasos = () => {
     </div>
    </div>
    </aside>
+
   )
 }
 

@@ -7,15 +7,17 @@ const Producto = ({producto}) => {
     const {handleClickProducto,changeModal} = useQuiosco();
     const{nombre,imagen,precio} = producto;
   return (
-    <div className='border p-3'>
+    <div className='border md:p-3'>
+        <div className='w-20 flex mx-auto md:w-full'>
         <Image src={`/assets/img/${imagen}.jpg`} alt={`Imagen del plato ${nombre}`} width={400} height={500}></Image>
+        </div>
 
-        <div className='p-5'>
-            <h3 className='text-2xl font-bold'>{nombre}</h3>
+        <div className='md:p-5'>
+            <h3 className='md:text-2xl font-bold'>{nombre}</h3>
             <p className='mt-5 font-black text-amber-300 text-4xl'>{
             formatToEuros(precio)}  </p>
 
-            <button type='button' className='bg-indigo-600 hover:bg-indigo-800  text-white font-bold uppercase p-3 w-full mt-5'
+            <button type='button' className='bg-indigo-600 hover:bg-indigo-800  text-white font-bold uppercase md:p-3 w-full mt-5'
             onClick={()=>{handleClickProducto(producto); changeModal()}}> Añadir </button>
         </div>
     </div>

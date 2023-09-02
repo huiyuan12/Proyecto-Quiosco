@@ -17,23 +17,31 @@ const ModalProducto = () => {
        }
     },[pedido,producto])
   return (
-    <div className='md:flex gap-10'>
-        <div className='md:w-1/3'>
+    <div className='md:flex md:gap-10'>
+        <div className='md:w-1/3 flex justify-around'>
             <Image width={300} height={200} alt={`imagen producto ${producto.nombre}`}
             src={`/assets/img/${producto.imagen}.jpg`}></Image>
+             <div className='md:invisible visible md:flex md:justify-end'>
+                <button onClick={()=>changeModal()}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+
+                </button>
+            </div>
         </div>
         <div className='md:w-2/3'>
-            <div className='flex justify-end'>
+            <div className='invisible md:visible md:flex md:justify-end'>
                 <button onClick={()=>changeModal()}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+            </svg>
 
                 </button>
             </div>
             <h1 className='text-3xl font-bold mt-5'> {producto.nombre}</h1>
             <p className='text-2xl text-amber-500 font-bold'>{formatToEuros(producto.precio)}</p>
-            <div className='mt-10 flex gap-5'>
+            <div className='mt-10 flex justify-center md:justify-start  gap-5 md:gap-5'>
                 <button type="button"  onClick={()=>{if(cantidad > 1) setCantidad(cantidad-1)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
@@ -47,7 +55,7 @@ const ModalProducto = () => {
 
                 </button>
             </div >
-            <button onClick={()=>{añadirPedido({...producto,cantidad}); changeModal()}} type="button" className='mt-10 w-3/4 px-5 py-2 bg-blue-600 text-white font-bold uppercase hover:bg-blue-700'>
+            <button  onClick={()=>{añadirPedido({...producto,cantidad}); changeModal()}} type="button" className='block mx-auto text-center  mt-10 w-3/4 px-5 py-2 bg-blue-600 text-white font-bold uppercase hover:bg-blue-700'>
                 {editando? "Guardar cambios" : "Añadir al pedido"}
             </button>
         </div>

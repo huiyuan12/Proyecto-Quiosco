@@ -14,11 +14,13 @@ const Categoria = ({categoria}) => {
     {!admin && (
     <div className={`${categoriaActual === categoria? "bg-amber-500":"" } hover:cursor-pointer flex gap-4 items-center border p-5
     hover:bg-amber-500`} onClick={()=>{handleChangeCategoria(categoria); router.push("/")}}>
-        <Image width={100} height={100}
+        <div className='w-10 md:w-32'>
+        <Image width={300} height={100}
         src={`/assets/img/icono_${icono}.svg`}
         alt={`Imagen de cateogria ${nombre}`}></Image>
+        </div>
 
-        <button type="button" className='text-2xl font-bold
+        <button type="button" className='md:text-2xl font-bold text-xs
         '>{nombre}</button>
     </div>
     )}

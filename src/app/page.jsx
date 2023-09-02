@@ -28,11 +28,11 @@ export default function Home() {
   return (
    
     <div className=' h-screen overflow-y-scroll'>
-     <h1 className='text-4xl font-black  '>
+     <h1 className='md:text-4xl font-black text-center md:text-left'>
         {categoriaActual.nombre}
      </h1>
-     <p className='text-2xl my-4'>Elige y personaliza tu pedido</p>
-    <div className='grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+     <p className='md:text-2xl my-4'>Elige y personaliza tu pedido</p>
+    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
     {
       categoriaActual?.productos?.map(element=>(
       <Producto key={element.id} producto={element}/>
