@@ -37,7 +37,7 @@ const Pasos = () => {
      </div>
     
    <div className='flex flex-col w-full md:w-full mt-5 ml-10 md:p-5'>
-    <nav className='flex justify-between font-bold text-3xl'>
+    <nav className='flex justify-around md:justify-between font-bold text-3xl'>
     {pasos.map(element=>(
         <Link key={element.id} href={`${element.url}`} onClick={()=>changePaso(element.id)} className='text-xs md:text-3xl md:p-5'>{element.nombre}</Link>
     ))}
