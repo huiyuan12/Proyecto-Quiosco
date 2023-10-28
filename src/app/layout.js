@@ -15,10 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es"  id="next">
-      <body id="next">
+      <body id="next ">
         <QuioscoProvider>
         <Pasos/>
-        <div className='flex md:gap-5'>
+        <div className='flex md:gap-5 px-5'>
         <Sidebar/> 
           
           {children}
