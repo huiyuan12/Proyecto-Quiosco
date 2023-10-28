@@ -22,7 +22,7 @@ const ResumenPage = () => {
       setAdmin(false);
     },[])
   return (
-   <div className=' flex flex-col '>
+   <div className=' flex flex-col container mx-auto text-center mt-10 '>
     <h1 className='md:text-4xl font-black text-center md:text-left'>
         Resumen de tu pedido
      </h1>

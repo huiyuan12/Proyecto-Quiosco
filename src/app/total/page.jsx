@@ -13,11 +13,11 @@ const TotalPage = () => {
     },[])
   if(pedido.length === 0) setTotal(0);
   return (
-    <div className='flex flex-col'>
-     <h1 className='text-4xl font-black '>
+    <div className='flex flex-col px-2 md:text-2xl text-base'>
+     <h1 className='md:text-4xl font-black '>
         Total de tu pedido
      </h1>
-     <p className='text-2xl my-4'> Confirma tu pedido</p>
+     <p className='md:text-2xl my-4'> Confirma tu pedido</p>
         <form onSubmit={enviarPedido}>
             <div className='w-full'>
                 <label htmlFor="nombre" className='block uppercase text-slate-500 font-bold text-xl'>Nombre</label>

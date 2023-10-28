@@ -9,9 +9,8 @@ const useLocalStorage = (key,initialState) => {
     },[])
 
     useEffect(()=>{
-        if(state.length >0){
+        
             localStorage.setItem(key,JSON.stringify(state))
-        }
     },[state])
   return [state,setState];
 }

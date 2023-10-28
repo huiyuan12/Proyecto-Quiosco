@@ -13,7 +13,7 @@ const Producto = ({producto}) => {
         </div>
 
         <div className='md:p-5'>
-            <h3 className='md:text-2xl font-bold text-center mt-3'>{nombre}</h3>
+            <h3 className='md:text-2xl text-sm font-bold text-center mt-3'>{nombre}</h3>
             <p className='mt-3 font-black text-amber-300 text-center md:text-4xl '>{
             formatToEuros(precio)}  </p>
 
